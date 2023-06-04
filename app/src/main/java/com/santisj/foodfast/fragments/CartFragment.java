@@ -220,7 +220,8 @@ public class CartFragment extends Fragment {
             String quantityFormatted = "Cantidad: <b>" + item.getQuantity() + "</b>";
             quantity.setText(Html.fromHtml(quantityFormatted, Html.FROM_HTML_MODE_LEGACY));
 
-            String priceFormatted = "Precio: <b>" + item.getFinalPrice() + "€</b>";
+            DecimalFormat df = new DecimalFormat("#.00");
+            String priceFormatted = "Precio: <b>" + df.format(item.getFinalPrice()) + "€</b>";
             price.setText(Html.fromHtml(priceFormatted, Html.FROM_HTML_MODE_LEGACY));
 
             title.setText(item.getItem().getName());
