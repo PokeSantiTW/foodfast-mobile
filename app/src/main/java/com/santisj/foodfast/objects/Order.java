@@ -12,11 +12,6 @@ public class Order {
     public Order(FoodItem item, int quantity) {
         this.item = item;
         this.quantity = quantity;
-
-//        // Debido a como funcionan los números flotantes, hacerlo de la forma normal podría
-//        // llegar a mostrar más de 10 decimales aún con un Decimal Format aplicado.
-//        BigDecimal number1 = BigDecimal.valueOf(item.getPrice());
-//        BigDecimal number2 = BigDecimal.valueOf(quantity);
         this.finalPrice = item.getPrice() * quantity;
         this.orderId = UUID.randomUUID().toString();
     }
