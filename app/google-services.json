@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "208537691790",
+    "firebase_url": "https://foodfast-tfg-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "foodfast-tfg",
+    "storage_bucket": "foodfast-tfg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208537691790:android:17a6c4714aa755b1d38bdf",
+        "android_client_info": {
+          "package_name": "com.santisj.foodfast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208537691790-3s1rjaa9k36n9v4fp1j232s2giej7aal.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa7wOdqEWAbOOXBfKHOkzrOjBR4dqMMYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208537691790-3s1rjaa9k36n9v4fp1j232s2giej7aal.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

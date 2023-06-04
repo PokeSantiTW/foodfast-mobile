@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_home_exit"
+        android:icon="@drawable/ic_menu_home_exit"
+        android:id="@+id/menu_item_exit"/>
+    <item android:title="@string/menu_home_search"
+        android:icon="@drawable/ic_menu_home_search"
+        android:id="@+id/menu_item_search"/>
+    <item android:title="@string/menu_home_foods"
+        android:icon="@drawable/ic_menu_home_foods"
+        android:id="@+id/menu_item_foods"/>
+    <item android:title="@string/menu_home_cart"
+        android:icon="@drawable/ic_menu_home_cart"
+        android:id="@+id/menu_item_cart"/>
+</menu>

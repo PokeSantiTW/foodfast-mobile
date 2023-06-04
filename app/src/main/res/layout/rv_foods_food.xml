@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_foods_food"
+    android:layout_width="185dp"
+    android:layout_height="290dp"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="@color/dark_green"
+    app:strokeWidth="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/card_foods_food_icon"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/hamburger"
+            android:contentDescription="@string/cd_logoFoodfast" />
+
+        <TextView
+            android:id="@+id/card_foods_food_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/font"
+            android:gravity="center_horizontal"
+            android:text="@string/placeholder_titlelong"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:textSize="@dimen/cardview_foods_food_textsize_normal" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_foods_food"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/card_foods_food_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="@string/placeholder_card_foods_food_quantity"
+                android:textColor="@color/black"
+                android:textFontWeight="800"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_foods_food_add"
+                app:layout_constraintEnd_toStartOf="@+id/card_foods_food_add"
+                app:layout_constraintStart_toEndOf="@+id/card_foods_food_remove"
+                app:layout_constraintTop_toTopOf="@+id/card_foods_food_add" />
+
+            <ImageButton
+                android:id="@+id/card_foods_food_add"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/btn_entercode"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/navigation_add"
+                app:tint="@color/normal_green"
+                tools:ignore="TouchTargetSizeCheck,ImageContrastCheck" />
+
+            <ImageButton
+                android:id="@+id/card_foods_food_remove"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/cd_remove"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/navigation_remove"
+                app:tint="@color/normal_green"
+                tools:ignore="TouchTargetSizeCheck,ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/card_foods_food_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text="@string/placeholder_card_foods_food_price"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/card_foods_food_quantity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

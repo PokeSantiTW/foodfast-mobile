@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">FoodFast</string>
+    <string name="circle_background_onboard">Circle background onboard</string>
+    <string name="cd_logoFoodfast">Logo app</string>
+    <string name="txt_onBoardTitle">ONBOARD_TITLE</string>
+    <string name="txt_onBoard_welcome">Bienvenido</string>
+    <string name="txt_onBoard_scanQR">Escanea el QR</string>
+    <string name="txt_onBoard_finish">Disfruta</string>
+    <string name="txt_onBoard_desc_welcome">FoodFast es una aplicación para restaurantes donde
+    te asignan un número de mesa y puedes empezar a pedir los platos desde la aplicación sin tener
+    que esperar a un camarero.\n\nEn cuanto el plato esté listo, ¡te lo traerán al momento!</string>
+    <string name="txt_onBoard_desc_scanQR">Cuando te asignen una mesa, esta tendrá un QR junto a
+    ella. Con FoodFast escanea este QR para asignarte la mesa y empezar a hacer pedidos una vez
+    estés listo.</string>
+    <string name="txt_onBoard_desc_finish">Tu comida llegará lo antes posible a tu mesa. ¡Esperamos
+    que esta experiencia sea lo mejor posible!</string>
+    <string name="txt_next">Siguiente</string>
+    <string name="txt_finish">Finalizar</string>
+    <string name="btn_qrcode">Escanear QR de acceso</string>
+    <string name="btn_entercode">Introducir código de acceso</string>
+    <string name="welcome">Bienvenido a FoodFast</string>
+    <string name="txt_foods_title">Elige categoría y plato</string>
+    <string name="menu_home_exit">Cerrar sesión</string>
+    <string name="menu_home_search">Buscar</string>
+    <string name="menu_home_foods">Comida</string>
+    <string name="menu_home_cart">Pedidos</string>
+    <string name="cd_add">Añadir</string>
+    <string name="cd_remove">Eliminar</string>
+    <string name="placeholder_titlelong">Lorem ipsum dolor sit amet.</string>
+    <string name="placeholder_titleshort">Lorem.</string>
+    <string name="placeholder_card_foods_food_price">0,00€</string>
+    <string name="placeholder_card_foods_food_quantity">0</string>
+    <string name="placeholder_lorem_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit in velit eu viverra. Nullam mollis molestie sapien, eget bibendum velit posuere eget. Etiam dignissim nulla ac lectus tempus, ut venenatis nunc pharetra. Mauris id leo vestibulum, aliquet lacus id, euismod nunc. Sed placerat id nunc in dignissim. Ut semper turpis non feugiat sagittis. Donec auctor justo lectus, in efficitur mi consectetur ullamcorper. Curabitur ac mi tellus.</string>
+    <string name="details_close">Cerrar detalles</string>
+    <string name="cd_itemImage">Imagen del producto</string>
+    <string name="currency">€</string>
+    <string name="search_title">Busca el plato que desees</string>
+    <string name="rv_cart_food_quantity">Cantidad: 0</string>
+    <string name="rv_cart_food_price">Precio: 0.0€</string>
+    <string name="cart_title">Pedidos realizados</string>
+    <string name="cart_price">Total a pagar: 0.0€</string>
+    <string name="cart_note">Nota para cocina:</string>
+    <string name="cart_table">Número de mesa: </string>
+    <string name="cart_button">Pagar y mandar a cocina</string>
+    <string name="cart_note_hint">Escribe aquí tu nota para mandar a cocina</string>
+    <string name="dialog_send_title">Mandar a cocina</string>
+    <string name="dialog_send_description">¿Estás seguro de pagar y enviar este pedido a cocina?</string>
+    <string name="dialog_send_complete_title">Pedido enviado</string>
+    <string name="dialog_send_complete_description">El pedido ha sido pagado y ya lo han recibido nuestros cocineros. ¡Gracias por comer en FoodFast!</string>
+    <string name="dialog_send_failure_title">Pedido fallido</string>
+    <string name="dialog_send_failure_description">Ha ocurrido un error y el pedido no ha sido pagado ni enviado a cocina. Contacta con administración.</string>
+    <string name="dialog_failure_title">Error</string>
+    <string name="dialog_failure_description">Ha ocurrido un error al ejecutar esta acción. Inténtalo más tarde.</string>
+    <string name="dialog_scan_failure_title">Error</string>
+    <string name="dialog_scan_failure_description">El código es incorrecto o ha ocurrido un error.</string>
+    <string name="dialog_scan_notavailable_title">Mesa no disponible</string>
+    <string name="dialog_scan_notavailable_description">El código de la mesa que estás escaneando está ocupada por otro usuario.</string>
+    <string name="dialog_code_title">Introducir código</string>
+    <string name="dialog_code_description">Escribe el código que se muestra debajo del QR para acceder.</string>
+    <string name="dialog_exit_title">Cerrar sesión</string>
+    <string name="dialog_exit_description">¿Estás seguro que quieres cerrar sesión? Todos tus pedidos se borrarán y la mesa quedará libre</string>
+    <string name="dialog_send_empty_title">Sin pedidos</string>
+    <string name="dialog_send_empty_description">No has añadido ningún pedido que puedas enviar a cocina.</string>
+    <string name="not_available">NO DISPONIBLE</string>
+</resources>

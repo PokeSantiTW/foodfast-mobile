@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardview_foods_compat_inset">8dp</dimen>
+    <dimen name="cardview_foods_corner_radius">5dp</dimen>
+    <dimen name="cardview_foods_section_textsize_normal">12sp</dimen>
+    <dimen name="cardview_foods_section_textsize_reduced">10sp</dimen>
+    <dimen name="cardview_foods_food_textsize_normal">18sp</dimen>
+    <dimen name="details_textsize_title">22sp</dimen>
+    <dimen name="details_textsize_subtitle">15sp</dimen>
+    <dimen name="cart_food_textsize_title">17sp</dimen>
+    <dimen name="cart_food_textsize_quantity">15sp</dimen>
+    <dimen name="cart_food_textsize_price">20sp</dimen>
+    <dimen name="cart_textsize_normal">20sp</dimen>
+</resources>
