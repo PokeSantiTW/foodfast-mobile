@@ -164,6 +164,13 @@ public class SearchFragment extends Fragment {
                         fragmentTransaction.replace(R.id.layout_app, detailsFragment);
                         fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
+
+                        fragmentManager.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+                            @Override
+                            public void onBackStackChanged() {
+                                holder.setItemQuantityText(FoodsFragment.getQuantityInMap(model));
+                            }
+                        });
                     }
                 });
             }

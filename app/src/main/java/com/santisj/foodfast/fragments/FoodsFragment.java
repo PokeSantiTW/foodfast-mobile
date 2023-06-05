@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.ObservableSnapshotArray;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -65,6 +66,7 @@ public class FoodsFragment extends Fragment {
     private FirebaseRecyclerAdapter<FoodSection, SectionViewHolder> adapter;
     private FirebaseRecyclerAdapter<FoodItem, ItemViewHolder> adapterItem;
     private DatabaseReference databaseReference;
+    private boolean sectionsDone;
 
     public FoodsFragment() {
         // Required empty public constructor
@@ -73,6 +75,7 @@ public class FoodsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sectionsDone = false;
     }
 
     @Override
@@ -116,7 +119,7 @@ public class FoodsFragment extends Fragment {
                         int previousSelectedPosition = selectedPosition;
                         selectedPosition = actualPosition;
 
-                        changeSectionItems(actualPosition);
+                        changeSectionItems(getRef(actualPosition).getKey());
 
                         notifyItemChanged(previousSelectedPosition);
                         notifyItemChanged(selectedPosition);
@@ -128,12 +131,35 @@ public class FoodsFragment extends Fragment {
             @Override
             public SectionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_foods_sections, parent, false);
+                sectionsDone = true;
                 return new SectionViewHolder(view);
+            }
+
+            @NonNull
+            @Override
+            public ObservableSnapshotArray<FoodSection> getSnapshots() {
+                return super.getSnapshots();
             }
         };
 
         rvFoodsSections.setAdapter(adapter);
-        changeSectionItems(0);
+
+        FirebaseDatabase.getInstance(FirebaseFoodfast.databaseURL).getReference()
+                .child("restaurant").child("sections_food").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot snap : snapshot.getChildren()) {
+                            changeSectionItems(snap.getKey());
+                            break;
+                        }
+                        return;
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
 
         return view;
     }
@@ -142,7 +168,9 @@ public class FoodsFragment extends Fragment {
     public void onStart() {
         super.onStart();
         adapter.startListening();
-        adapterItem.startListening();
+        if (sectionsDone) {
+            adapterItem.startListening();
+        }
     }
 
     @Override
@@ -152,9 +180,9 @@ public class FoodsFragment extends Fragment {
         adapterItem.stopListening();
     }
 
-    public void changeSectionItems(int sectionIndex) {
+    public void changeSectionItems(String sectionId) {
 
-        Query keyQuery = FirebaseFoodfast.sectionItems(sectionIndex);
+        Query keyQuery = FirebaseFoodfast.sectionItems(sectionId);
         DatabaseReference dataRef = FirebaseFoodfast.foodsReference();
 
         FirebaseRecyclerOptions<FoodItem> optionsItems =

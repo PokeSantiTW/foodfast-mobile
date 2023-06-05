@@ -23,9 +23,9 @@ public class FirebaseFoodfast {
                 .getReference().child("restaurant").child("sections_food");
     }
 
-    public static DatabaseReference sectionItems(int sectionIndex) {
+    public static DatabaseReference sectionItems(String sectionId) {
         return FirebaseDatabase.getInstance(databaseURL).getReference().child("restaurant")
-                .child("sections_food").child(String.valueOf(sectionIndex))
+                .child("sections_food").child(sectionId)
                 .child("items");
     }
 
