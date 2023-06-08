@@ -27,3 +27,9 @@ Cuando tengas todo listo, ve a "Pedidos". Añade una nota si lo ves necesario. P
 <p align="center">
   <img height="500" src="https://raw.githubusercontent.com/PokeSantiTW/foodfast-mobile/main/images/Pedidos.jpg">
 </p>
+
+Cuando quieras cerrar sesión, haz clic en el primer botón de la barra de navegación y haz clic en Salir. Hacer esto hará que tu mesa se desocupe y otro usuario pueda usar el código de la mesa.
+
+<p align="center">
+  <img height="500" src="https://raw.githubusercontent.com/PokeSantiTW/foodfast-mobile/main/images/CerrarSesion.png">
+</p>
