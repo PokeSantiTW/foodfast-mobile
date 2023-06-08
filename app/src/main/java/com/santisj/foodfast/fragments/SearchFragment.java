@@ -195,7 +195,6 @@ public class SearchFragment extends Fragment {
                 protected FilterResults performFiltering(CharSequence constraint) {
                     String query = constraint.toString().toLowerCase();
                     FilterResults results = new FilterResults();
-                    int position = 0;
 
                     if (query.isEmpty()) {
                         results.values = getSnapshots();

@@ -314,9 +314,6 @@ public class FoodsFragment extends Fragment {
         }
 
         public void bindData(FoodSection section) {
-//            if (section.getSectionName().length() >= 8) {
-//                sectionName.setTextSize(TypedValue.COMPLEX_UNIT_PX, itemView.getResources().getDimension(R.dimen.cardview_foods_textsize_reduced));
-//            }
             sectionName.setText(section.getSectionName());
             int resourceId = itemView.getResources().getIdentifier(section.getSectionIcon(),
                     "drawable", itemView.getContext().getPackageName());
